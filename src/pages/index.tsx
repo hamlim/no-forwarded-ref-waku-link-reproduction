@@ -1,9 +1,50 @@
+import { Link } from "waku";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "#/components/ui/tooltip";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h2>Home</h2>
-      <p>This is the home page.</p>
-    </div>
+    <TooltipProvider>
+      <div className="flex flex-col justify-center items-center h-screen gap-6">
+        <h1 className="text-center text-2xl font-bold">
+          no-forwarded-ref-waku-link-reproduction
+        </h1>
+        <p>
+          Hover over each link - the `Link to Home` won't show a tooltip on
+          hover, but the `Anchor to Home` will.
+        </p>
+        <div className="flex flex-col gap-4">
+          <div>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link to="/" className="text-primary">
+                  Link to Home
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Home</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+          <div>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a href="/" className="text-primary">
+                  Anchor to Home
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Home</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+    </TooltipProvider>
   );
 }
 

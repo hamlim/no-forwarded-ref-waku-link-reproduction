@@ -43,6 +43,12 @@ export default function Home() {
             </Tooltip>
           </div>
         </div>
+        <p>
+          Source code:{" "}
+          <a href="https://github.com/hamlim/no-forwarded-ref-waku-link-reproduction">
+            here
+          </a>
+        </p>
       </div>
     </TooltipProvider>
   );

@@ -23,7 +23,7 @@
     "react-server-dom-webpack": "experimental",
     "tailwind-merge": "3.3.0",
     "waku": "0.22.4",
-    "wrangler": "4.14.1"
+    "wrangler": "4.59.1"
   },
   "imports": {
     "#/*": "./src/*",
